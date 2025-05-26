@@ -98,30 +98,18 @@ The system is composed of several independent microservices that work together t
 - Git
 
 ---
-## Project Illustration
-your-main-project-folder/
-├── config-server/
-│   ├── src/
-│   ├── pom.xml
-│   └── Dockerfile
-├── eureka-server/
-│   ├── src/
-│   ├── pom.xml
-│   └── Dockerfile
-├── inventory-service/
-│   ├── src/main/proto/
-│   ├── src/main/resources/
-│   ├── pom.xml
-│   └── Dockerfile
-├── order-service/
-│   ├── src/
-│   ├── pom.xml
-│   └── Dockerfile
-├── api-gateway/
-│   ├── src/
-│   ├── pom.xml
-│   └── Dockerfile
-├── configuration-files/   # (separate repo)
+## Key Service Ports
+| Service        | Port                          |
+| -------------- | ----------------------------- |
+| Config Server  | `localhost:8888`              |
+| Eureka Server  | `localhost:8761`              |
+| Keycloak       | `localhost:8180`              |
+| API Gateway    | `localhost:7070`              |
+| Inventory API  | `localhost:8080` (if exposed) |
+| Inventory gRPC | `localhost:9091` (if exposed) |
+| Order Service  | `localhost:9090` (if exposed) |
+| Elasticsearch  | `localhost:9200`              |
+
 │   ├── inventory-service-dev.properties
 │   ├── order-service-dev.properties
 │   ├── api-gateway-dev.properties
